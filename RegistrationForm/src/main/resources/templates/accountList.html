@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Account List</title>
+  <link rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <h1>Account List</h1>
+
+<br/> <br/>
+<div>
+  <table border="1" bgcolor="#C0C0C0">
+      <tr>
+          <th>Account</th>
+          <th>Password</th>
+      </tr>
+    <tr th:each ="account : ${accounts}">
+        <td th:utext="${account.username}">...</td>
+        <td th:utext="${account.password}">...</td>
+
+    </tr>
+  </table>
+  <a href="addAccount">Create Account</a>
+</div>
+</body>
+</html>
